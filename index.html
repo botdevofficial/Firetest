@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Icon Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- === FAVICON SETUP === -->
+    <!-- These links point to the icon files you will upload alongside this HTML file. -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- The manifest.json content is embedded here to keep everything in a single file. -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJzaG9ydF9uYW1lIjogIkNvZGVGaXJlIiwKICAibmFtZSI6ICJDb2RlRmlyZSAtIEZyZXNoIEljb24gRGVtbyIsCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImFuZHJvaWQtY2hyb21lLTE5MngxOTIucG5nIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIiwKICAgICAgInNpemVzIjogIjE5MngxOTIiCiAgICB9LAogICAgewogICAgICAic3JjIjogImFuZHJvaWQtY2hyb21lLTUxMng1MTIucG5nIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIiwKICAgICAgInNpemVzIjogIjUxMng1MTIiCiAgICB9CiAgXSwKICAic3RhcnRfdXJsIjogIi4iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJ0aGVtZV9jb2xvciI6ICIjYzUwMDAwIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMTgyYzM0Igp9">
+    <meta name="theme-color" content="#c50000"> <!-- A shade of red to match the icon -->
+    <!-- === END FAVICON SETUP === -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+        body { font-family: 'Montserrat', sans-serif; }
+        .page-content { display: none; }
+        .page-content.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        .nav-link.active { background-color: #c50000; color: white; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-64 bg-gray-800 text-gray-200 flex flex-col">
+            <div class="h-20 flex items-center justify-center bg-gray-900">
+                <img src="android-chrome-192x192.png" alt="Site Logo" class="h-10 w-10 rounded-lg">
+                <span class="ml-3 text-xl font-bold">CodeFire</span>
+            </div>
+            <nav id="navigation" class="flex-1 px-4 py-6 space-y-2">
+                <a href="#" class="nav-link flex items-center px-4 py-3 rounded-lg hover:bg-gray-700 transition" data-page="home">
+                    <span class="mr-3">🏠</span> Home
+                </a>
+                <a href="#" class="nav-link flex items-center px-4 py-3 rounded-lg hover:bg-gray-700 transition" data-page="about">
+                    <span class="mr-3">ℹ️</span> About Us
+                </a>
+                <a href="#" class="nav-link flex items-center px-4 py-3 rounded-lg hover:bg-gray-700 transition" data-page="contact">
+                    <span class="mr-3">✉️</span> Contact
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-8 md:p-12">
+            
+            <!-- Home Page Content -->
+            <div id="home" class="page-content">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Branding Your Digital Identity</h1>
+                <p class="text-lg text-gray-600 mb-10">This page demonstrates how your icons create a consistent brand experience. Check these key areas:</p>
+                
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-start">
+                        <div class="text-3xl mr-5">🖥️</div>
+                        <div>
+                            <h2 class="text-xl font-bold text-gray-800">Browser Tab & Bookmarks</h2>
+                            <p class="text-gray-600 mt-1">Your `favicon.ico` provides the small, recognizable icon in the browser tab and next to the name in your bookmarks list, making your site easy to spot.</p>
+                        </div>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-sm flex items-start">
+                        <div class="text-3xl mr-5">📱</div>
+                        <div>
+                            <h2 class="text-xl font-bold text-gray-800">Mobile Home Screen</h2>
+                            <p class="text-gray-600 mt-1">When users add your site to their home screen on iOS or Android, the high-resolution `apple-touch-icon.png` and `android-chrome-*.png` files create a crisp, app-like shortcut.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Page Content -->
+            <div id="about" class="page-content">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Mission</h1>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <p class="text-lg text-gray-600">This is the "About" section. In a modern single-page site, navigation is seamless. Notice that even though the content changed, the icon in the browser tab remains constant, providing a stable brand anchor for the user.</p>
+                </div>
+            </div>
+
+            <!-- Contact Page Content -->
+            <div id="contact" class="page-content">
+                 <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Connect With Us</h1>
+                 <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <p class="text-lg text-gray-600">This is the "Contact" section. A consistent favicon across all views—informational or interactive—is a hallmark of a professional, well-built web application. It builds trust and reinforces brand identity from start to finish.</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navigation = document.getElementById('navigation');
+            const navLinks = navigation.querySelectorAll('.nav-link');
+            const pages = document.querySelectorAll('.page-content');
+            
+            const showPage = (pageId) => {
+                pages.forEach(page => page.classList.remove('active'));
+                document.getElementById(pageId)?.classList.add('active');
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.page === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+
+            navigation.addEventListener('click', (event) => {
+                const navLink = event.target.closest('.nav-link');
+                if (navLink) {
+                    event.preventDefault();
+                    const pageId = navLink.dataset.page;
+                    showPage(pageId);
+                }
+            });
+
+            // Show the home page by default
+            showPage('home');
+        });
+    </script>
+</body>
+</html>
+
